@@ -34,10 +34,9 @@ async def roulette(ctx):
         num_attempts += 1
         
     
-    if num_attempts <= MAX_ATTEMPTS:
+    if num_attempts <= int(MAX_ATTEMPTS):
         await ctx.guild.kick(member_to_kick)
         await ctx.send("Kicked " + str(member_to_kick) + " from the server.")
-    
     else: 
         await ctx.send("Could not find members to kick. Please check role hierarchy and make sure RouletteBot is above the lowest common role.")
 
