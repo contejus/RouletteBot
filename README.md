@@ -5,9 +5,8 @@
 # RouletteBot
 A Discord bot that kicks a random user from the server when called.
 
+## Add to Server
 <a href="https://discord.com/api/oauth2/authorize?client_id=721577851458945085&permissions=268435494&scope=bot">
-    Add to your Discord server:
-    <br />
     <img src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg" alt="Discord link" width="150"/>
 </a>
 
