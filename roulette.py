@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-MAX_ATTEMPTS = os.getenv('MAX_ATTEMPTS', default=10)
+MAX_ATTEMPTS = int(os.getenv('MAX_ATTEMPTS', default=10))
 
 bot = commands.Bot(command_prefix='!')
 
@@ -34,7 +34,7 @@ async def roulette(ctx):
         num_attempts += 1
         
     
-    if num_attempts <= int(MAX_ATTEMPTS):
+    if num_attempts <= MAX_ATTEMPTS:
         await ctx.guild.kick(member_to_kick)
         await ctx.send("Kicked " + str(member_to_kick) + " from the server.")
     else: 
