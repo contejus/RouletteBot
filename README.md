@@ -3,6 +3,9 @@ A Discord bot that kicks a random user from the server when called.
 
 [Click here to add the bot to your server](https://discord.com/api/oauth2/authorize?client_id=721577851458945085&permissions=268435494&scope=bot)
 
+## Deployment
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/contejus/RouletteBot/tree/master)
+
 ## Setup
 1. Clone repository using `git clone https://github.com/contejus/RouletteBot.git`.
 2. Change directory using `cd RouletteBot/`
