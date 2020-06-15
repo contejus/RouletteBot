@@ -7,6 +7,11 @@
     "env": {
         "DISCORD_TOKEN": {
           "description": "Discord bot key, used to autheticate with Discord APIs."
+        },
+        "MAX_ATTEMPTS": {
+          "description": "Number of attempts made by the bot to find an eligible user to kick. Default is 10.",
+          "value": "10",
+          "required": false
         }
       }
 }

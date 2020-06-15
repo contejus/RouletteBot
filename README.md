@@ -27,4 +27,4 @@ A Discord bot that kicks a random user from the server when called.
 ## Notes
 - The bot will not/cannot kick the server owner. 
 - The bot will not kick members whose highest roles are higher than the RouletteBot role. By default, RouletteBot's role is higher than the @everyone role. 
-- The bot will stop if it cannot find an eligible member within 3 tries. 
+- The bot will stop if it cannot find an eligible member within MAX_ATTEMPTS tries, 10 by default. 

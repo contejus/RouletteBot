@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-MAX_ATTEMPTS = 10
+MAX_ATTEMPTS = os.getenv('MAX_ATTEMPTS', default=10)
 
 bot = commands.Bot(command_prefix='!')
 
