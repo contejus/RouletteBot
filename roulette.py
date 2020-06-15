@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
+MAX_ATTEMPTS = 10
 
 bot = commands.Bot(command_prefix='!')
 
@@ -18,22 +19,26 @@ async def on_ready():
 async def roulette(ctx):
     bot_member = ctx.guild.me
     guild_members = ctx.guild.members
+
     num_attempts = 0
     member_to_kick = bot_member
-    
-    while member_to_kick.roles[-1] >= bot_member.roles[-1] or member_to_kick == bot_member:
-        if num_attempts > 3:
+
+    await ctx.send("Kicking " + str(member_to_kick) + " from the server.")
+
+    while member_to_kick.top_role >= bot_member.top_role or member_to_kick == bot_member:
+        await ctx.send("Can't kick " + str(member_to_kick) + " from the server. Their top role is higher than the bot's role.")
+        if num_attempts > MAX_ATTEMPTS:
             break
         member_to_kick = random.choice(guild_members)
+        await ctx.send("Kicking " + str(member_to_kick) + " from the server instead.")
         num_attempts += 1
-        await ctx.send("Kicking " + str(member_to_kick) + " from the server.")
+        
     
-    if num_attempts <= 3:
+    if num_attempts <= MAX_ATTEMPTS:
         await ctx.guild.kick(member_to_kick)
-
         await ctx.send("Kicked " + str(member_to_kick) + " from the server.")
     
     else: 
-        await ctx.send("Could not find members to kick. Please check role hierarchy and make sure RouletteBot is below the Admin role. ")
+        await ctx.send("Could not find members to kick. Please check role hierarchy and make sure RouletteBot is above the lowest common role.")
 
 bot.run(TOKEN)
