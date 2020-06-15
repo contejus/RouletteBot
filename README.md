@@ -1,4 +1,4 @@
-# RouletteBot
+![alt RouletteBot](https://github.com/contejus/RouletteBot/blob/master/logo.jpg?raw=true) RouletteBot
 A Discord bot that kicks a random user from the server when called.
 
 [Click here to add the bot to your server](https://discord.com/api/oauth2/authorize?client_id=721577851458945085&permissions=268435494&scope=bot)
