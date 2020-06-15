@@ -34,6 +34,6 @@ async def roulette(ctx):
         await ctx.send("Kicked " + str(member_to_kick) + " from the server.")
     
     else: 
-        await ctx.send("Could not find members to kick. Please check role heirarchy and make sure RouletteBot is below the Admin role. ")
+        await ctx.send("Could not find members to kick. Please check role hierarchy and make sure RouletteBot is below the Admin role. ")
 
 bot.run(TOKEN)
