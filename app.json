@@ -2,6 +2,11 @@
     "name": "RouletteBot",
     "description": "A Discord bot that kicks random users from the server.",
     "repository": "https://github.com/contejus/RouletteBot",
-    "keywords": ["roulette", "discord", "bot", "discord.py"]
+    "keywords": ["roulette", "discord", "bot", "discord.py"],
+    "env": {
+        "DISCORD_TOKEN": {
+          "description": "Discord bot key, used to autheticate with Discord APIs."
+        }
+      }
 }
   
