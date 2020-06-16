@@ -10,6 +10,8 @@ A Discord bot that kicks a random user from the server when called.
     <img src="https://discord.com/assets/e4923594e694a21542a489471ecffa50.svg" alt="Discord link" width="150"/>
 </a>
 
+NOTE: I recommend hosting this bot yourself with the Heroku One-Click deploy button below, as I will most likely be shutting down my own instance until I need to use it. 
+
 ## Deployment
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/contejus/RouletteBot/tree/master)
 
@@ -18,7 +20,7 @@ A Discord bot that kicks a random user from the server when called.
 2. Change directory using `cd RouletteBot/`
 3. Create a `.env` file with the following contents:
     `DISCORD_TOKEN=<YOUR_DISCORD_TOKEN_HERE>`
-4. Create a Discord bot and add your Discord token as well as a custom invite to allow the bot into your server.
+4. Create a Discord bot and Discord API token using the Discord Developer Portal, as well as a custom invite to allow the bot to join your server.
 5. Create a virtual environment with `python -m venv venv`.
 6. Activate virtual environment with `source venv/bin/activate` on Linux or `source venv/Scripts/activate` on Windows.
 7. Install requirements with `pip install -r requirements.txt`.
