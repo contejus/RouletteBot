@@ -32,4 +32,8 @@ NOTE: I recommend hosting this bot yourself with the Heroku One-Click deploy but
 ## Notes
 - The bot will not/cannot kick the server owner. 
 - The bot will not kick members whose highest roles are higher than the RouletteBot role. By default, RouletteBot's role is higher than the @everyone role. 
-- The bot will stop if it cannot find an eligible member within MAX_ATTEMPTS tries, 10 by default. 
+- The bot will stop if it cannot find an eligible member within MAX_ATTEMPTS tries, 10 by default.
+
+## Tools Used
+- Python 3.7.3
+- [Discord.py](https://discordpy.readthedocs.io/en/latest/)
